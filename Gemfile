@@ -4,6 +4,8 @@ ruby '3.0.3'
 gem 'sinatra', '>= 2.0.2'
 gem 'sinatra-flash', '0.3.0'
 
+gem 'puma'
+
 group :development, :test do
   gem 'cucumber', '2.0.0'
   gem 'cucumber-sinatra', '0.5.0'
@@ -18,8 +20,6 @@ group :development, :test do
   gem 'byebug' #, '5.0.0'
   gem 'irb'
   gem 'rdoc'
-
-  gem 'puma'
 
   gem 'launchy', '2.4.3'
   gem 'rerun', '0.10.0'
