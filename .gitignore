@@ -3,3 +3,5 @@ coverage
 TAGS
 .ruby-version
 *.swp
+vendor/
+.byebug_history

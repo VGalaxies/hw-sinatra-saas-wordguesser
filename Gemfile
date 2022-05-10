@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.6.6'
+ruby '3.0.3'
 
 gem 'sinatra', '>= 2.0.2'
 gem 'sinatra-flash', '0.3.0'
@@ -15,7 +15,10 @@ group :development, :test do
   gem 'rack-test', '0.6.3'
   gem 'rack_session_access', '0.1.1'
 
-  gem 'byebug', '5.0.0'
+  gem 'byebug' #, '5.0.0'
+  gem 'irb'
+  gem 'rdoc'
+
   gem 'launchy', '2.4.3'
   gem 'rerun', '0.10.0'
 
