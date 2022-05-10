@@ -19,6 +19,8 @@ group :development, :test do
   gem 'irb'
   gem 'rdoc'
 
+  gem 'puma'
+
   gem 'launchy', '2.4.3'
   gem 'rerun', '0.10.0'
 
