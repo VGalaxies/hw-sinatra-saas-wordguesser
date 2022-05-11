@@ -39,8 +39,6 @@ class WordGuesserApp < Sinatra::Base
   # If a guess is invalid, set flash[:message] to "Invalid guess."
   post '/guess' do
     letter = params[:guess].to_s[0]
-
-    save_and_open_page
     
     ### YOUR CODE HERE ###
     begin
