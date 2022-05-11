@@ -40,6 +40,8 @@ class WordGuesserApp < Sinatra::Base
   post '/guess' do
     letter = params[:guess].to_s[0]
 
+    save_and_open_page
+    
     ### YOUR CODE HERE ###
     begin
     if not @game.guess(letter)
@@ -59,17 +61,33 @@ class WordGuesserApp < Sinatra::Base
   # wrong_guesses and word_with_guesses from @game.
   get '/show' do
     ### YOUR CODE HERE ###
-    erb :show # You may change/remove this line
+    if @game.check_win_or_lose == :win
+      redirect '/win'
+    end
+    
+    if @game.check_win_or_lose == :lose
+      redirect '/lose'
+    end
+    
+    erb :show
   end
   
   get '/win' do
     ### YOUR CODE HERE ###
-    erb :win # You may change/remove this line
+    if @game.check_win_or_lose != :win
+      redirect '/show'
+    end
+
+    erb :win
   end
   
   get '/lose' do
     ### YOUR CODE HERE ###
-    erb :lose # You may change/remove this line
+    if @game.check_win_or_lose != :lose
+      redirect '/show'
+    end
+
+    erb :lose
   end
   
 end
