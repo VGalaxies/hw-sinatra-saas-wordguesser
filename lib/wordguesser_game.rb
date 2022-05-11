@@ -58,7 +58,6 @@ class WordGuesserGame
     end
 
     if @guesses.length + @wrong_guesses.length >= 7
-      byebug
       @check_win_or_lose = :lose
     end
     
