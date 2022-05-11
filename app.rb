@@ -24,6 +24,11 @@ class WordGuesserApp < Sinatra::Base
   get '/new' do
     erb :new
   end
+
+  get '/local' do
+    @game = WordGuesserGame.new(LocalWordGenerator.get_word)
+    redirect '/show'
+  end
   
   post '/create' do
     # NOTE: don't change next line - it's needed by autograder!

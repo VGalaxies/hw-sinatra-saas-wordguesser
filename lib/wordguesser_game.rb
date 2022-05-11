@@ -1,3 +1,10 @@
+class LocalWordGenerator
+  def self.get_word
+    arr = IO.readlines("dict/words") # relative to root
+    return arr[Random.new.rand(0...arr.length)].strip
+  end
+end
+
 class WordGuesserGame
 
   # add the necessary class methods, attributes, etc. here
